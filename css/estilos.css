@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background: rgb(50, 149, 241);
+    font-family: sans-serif;
+    color: whitesmoke;
+    display: flex;
+    top: 0;
+    left: 0;
+    position: fixed;
+    margin: auto;
+}
+
+h1 {
+    float: left;
+    margin-left: 20px;
+}
+
+.buscador{
+    float: left;
+    left: 0;
+    top: 0;
+    height: 50px;
+    display: flex;
+    margin: auto;
+}
+
+.barramenu {
+    float: left;
+    display: flex;
+}
+
+#bienvenida{
+    margin-top: 50px;
+    background: rgb(50, 149, 241);
+    border-color: black;
+    text-align: center;
+    border: solid 2px;
+}
+
+img{
+    width: 20px;
+    height: 400px;
+    display: flex;
+    margin: auto;
+    border-color: black;
+}
+
+#IngresoObra{
+    background: rgb(50, 149, 241);
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    position: fixed;
+    border-color: black;
+    text-align: center;
+    border: solid 2px;
+}
