@@ -61,3 +61,15 @@ img{
     text-align: center;
     border: solid 2px;
 }
+
+#Formulario{
+    background: rgb(50, 149, 241);
+    text-align: center;
+}
+
+#Footer{
+    background: rgb(50, 149, 241);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+}
