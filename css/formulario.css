@@ -1,8 +1,10 @@
 /*Estilo caja formulario*/
 #formulario{
+    margin-top: 10px;
     background-color: aqua;
-    padding: 40px;
+    padding: 50px;
     font-family: sans-serif;
+    text-align: center;
 }
 
 .form-titulo{
@@ -23,12 +25,12 @@
 
 .contenedor-input{
     padding: 10px 10px;
-    display: flex;
+    display: block;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 /*Columnas*/
-input{
+.contenedor-input input{
     padding: 10px;
     margin-bottom: 10px;
     

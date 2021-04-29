@@ -23,13 +23,11 @@ h1 {
 }
 
 .buscador{
-    float: left;
     left: 0;
     top: 0;
     height: 50px;
     display: flex;
     margin: auto;
-    justify-content: space-between;
 }
 
 .barramenu {
