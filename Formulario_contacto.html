@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Contacto</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <script src="lib/jquery.js"></script>
+    <script src="dist_jqv/jquery.validate.min.js"></script>
+</head>
+
+<body>
+    <header><a href="index.html" style="color: whitesmoke;"><h1>Ground Zero</h1></a>
+        <div class="buscador">
+            <nav class="navbar navbar-light" style="background-color: rgb(24, 84, 139);">
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Buscar..." aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+                </form>
+            </nav>
+        </div>
+
+        <div class="barramenu">
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgb(24, 84, 139);">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                    aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html" style="color: whitesmoke;">Inicio<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"  style="color: whitesmoke;">Iniciar Sesión</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#"  style="color: whitesmoke;" id="navbarDropdownMenuLink"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Galeria
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item" href="galeria-plastica.html">Plastica 1</a>
+                                <a class="dropdown-item" href="#">Categoria 2</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Artista 1</a>
+                                <a class="dropdown-item" href="#">Artista 2</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="galeria-plastica.html" style="color: whitesmoke;">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" style="color: whitesmoke;">Registro</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Formulario_contacto.html" style="color: whitesmoke;">Contactanos</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!--Validacion coon metodo jquery-->
+    <script>
+        $(document).ready(function () {
+
+            $("#formu-c").validate({
+                rules: {
+                    txtNombreCompleto: {
+                        required: true,
+                        minlength: 5,
+
+                    },
+                    txtEmail: {
+                        required: true
+                    },
+                    txtMensaje: {
+                        required: true,
+                        minlength: 10
+                    }
+                },
+                messages: {
+                    txtNombreCompleto: {
+                        required: "Es necesario el nombre",
+                        minlength: "Minimo 5 caracteres"
+                    },
+                    txtEmail: {
+                        required: "Es requerido un email"
+                    },
+                    txtMensaje: {
+                        required: "Tiene que escribir un mensaje",
+                        minlength: "Minimo 10 caracteres"
+                    }
+                }
+            });
+        });
+    </script>
+
+    <section id="formulario">
+        <form class="form-contacto" id="formu-c" action="" method="post" onsubmit="return validarCampos()">
+            <h2 class="form-titulo">Contacto General</h2>
+            <div class="contenedor-input">
+                <input class="col-xl" type="text" name="txtNombreCompleto" id="txtNombreCompleto"
+                    placeholder="Ingrese su nombre y apellido" pattern="[A-Za-z ]+" title="Solo letras">
+                <input class="col-xl" type="email" name="txtEmail" id="txtEmail" placeholder="Ingrese su email">
+                <input class="col-xl" type="text" name="txtFono" id="txtFono"
+                    placeholder="Ingrese su numero de telefono">
+                <input class="col-xxl" type="text" name="txtMensaje" id="txtMensaje" placeholder="Ingrese un mensaje">
+
+                <input class="btn-comprobar" type="submit" value="Comprobar" onclick="validarCampos()">
+                <input class="btn-enviar" type="button" value="Enviar" onclick="enviar()">
+            </div>
+        </form>
+    </section>
+    <script src="js/Contacto.js"></script>
+    <script>
+        var arreglo = new Array();
+        var indice = 0;
+        function enviar() {
+            //Capturar campos del formulario y guardarlos en usuario
+            var nombre = document.getElementById('txtNombreCompleto').value;
+            var email = document.getElementById('txtEmail').value;
+            var fono = document.getElementById('txtFono').value;
+            var mensaje = document.getElementById('txtMensaje').value;
+            con = new contacto();
+            con.setNombre(nombre);
+            con.setEmail(email);
+            con.setFono(fono);
+            con.setMensaje(mensaje);
+            //Se agrega la informacion capturada al local storage de la pagina
+            arreglo[indice] = JSON.stringify(con);
+            localStorage.setItem('registro', arreglo);
+            indice++;
+        }
+
+
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

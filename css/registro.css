@@ -1,0 +1,39 @@
+#registro{
+    margin-top: auto;
+    background: rgb(50, 149, 241);
+    padding: 40px;
+    font-family: sans-serif;
+}
+
+.titulo-registro{
+    background: coral;
+    color: whitesmoke;
+    text-align: center;
+    font-family: sans-serif;
+    padding: 25px;
+    border-bottom: solid 2px black;
+    border-radius: 5px;
+}
+
+.form-registro{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 90%;
+    background: coral;
+    border-radius: 6px;
+}
+
+.contenedor-input{
+    padding: 10px 20px;
+    display: block;
+
+}
+
+input{
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.col-xl{
+    width: 100%;
+}

@@ -1,0 +1,48 @@
+.imagenes{
+    border-radius: 15px;
+    margin: 15px;
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+#galeria{
+    background-color: aquamarine;
+    text-align: center;
+}
+#galeria .contenedor{
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+
+}
+
+#galeria .contenedor article{
+    margin-top: 70px;
+}
+
+/*Galeria imagenes con descripcion*/
+#descripcion{
+    margin-top: 50px;
+    background-color: darkcyan;
+}
+
+#descripcion .imagenes{
+    width: 650px;
+    height: 50%;
+}
+
+#descripcion p{
+    margin-top: 20px;
+    text-align: left;
+    font-weight: bold;
+}
+
+/*galeria de la propia obra*/
+#galeria-obra{
+    text-align: left;
+    background-color: rgb(221, 218, 218);
+}
+
+#galeria-obra h2{
+    font-family: cursive;
+}

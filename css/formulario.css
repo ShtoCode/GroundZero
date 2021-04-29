@@ -1,0 +1,56 @@
+/*Estilo caja formulario*/
+#formulario{
+    background-color: aqua;
+    padding: 40px;
+    font-family: sans-serif;
+}
+
+.form-titulo{
+    background-color: rgb(194, 194, 166);
+    text-align: center;
+    padding: 20px;
+    color: rgb(5, 5, 97);
+    border-radius: 8px 8px 0px 0px;
+}
+
+.form-contacto{
+    width: 95%;
+    margin: auto;
+    max-width: 800px;
+    background: rgba(0, 0, 0, 0.63);
+    border-radius: 8px;
+}
+
+.contenedor-input{
+    padding: 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+/*Columnas*/
+input{
+    padding: 10px;
+    margin-bottom: 10px;
+    
+}
+
+.col-xl{
+    width: 100%;
+}
+
+.col-xxl{
+    width: 100%;
+    padding: 10%;
+}
+
+.btn-enviar{
+    color: rgb(10, 10, 10);
+    background: chartreuse;
+    margin: auto;
+}
+
+.btn-comprobar{
+    background: blueviolet;
+    color: white;
+    margin: auto;
+}
