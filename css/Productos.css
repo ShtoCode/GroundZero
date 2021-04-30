@@ -1,0 +1,16 @@
+
+.productos{
+    margin-top: 60px;
+    float: left;
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+img{
+    border: rgba(95, 25, 25, 0.747) 5px solid;    
+}
+
+p{
+    font-family: cursive;
+}

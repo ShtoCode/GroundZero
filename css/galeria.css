@@ -6,7 +6,6 @@
     float: left;
 }
 #galeria{
-    background-color: aquamarine;
     text-align: center;
 }
 #galeria .contenedor{
@@ -23,7 +22,7 @@
 /*Galeria imagenes con descripcion*/
 #descripcion{
     margin-top: 50px;
-    background-color: darkcyan;
+
 }
 
 #descripcion .imagenes{
@@ -40,7 +39,7 @@
 /*galeria de la propia obra*/
 #galeria-obra{
     text-align: left;
-    background-color: rgb(221, 218, 218);
+
 }
 
 #galeria-obra h2{
