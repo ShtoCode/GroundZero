@@ -1,0 +1,40 @@
+#ingreso {
+    margin-top: 10px;
+    background: rgb(50, 149, 241);
+    padding: 50px;
+    font-family: sans-serif;
+    border-bottom: solid 2px black;
+    text-align: center;
+}
+
+.titulo-ingreso {
+
+    margin-top: 10px;
+    background: coral;
+    color: whitesmoke;
+    font-family: sans-serif;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+.form-ingreso{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 90%;
+    background: coral;
+    border-radius: 6px;
+}
+
+.contenedor-input{
+    padding: 10px 10px;
+    display: block;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contenedor-input input{
+    padding: 10px;
+    margin-bottom: 40px;
+    
+}

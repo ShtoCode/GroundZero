@@ -10,6 +10,8 @@
     <title>Ground Zero</title>
     <link rel="stylesheet" href="css/estilos.css">
     <link rel="stylesheet" href="css/fontello.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/ingreso.css">
 </head>
 
 <body>
@@ -72,50 +74,20 @@
             </nav>
         </div>
     </header>
+
     <main>
-
-        <section id="bienvenida">
-            <h2>Formulario de obra</h2>
-        </section>
-        <section id="Formulario">
-
-            <form id="basic-form" action="" method="post">
-                <p>
-                    <input id="name" name="name" minlength="3" type="text" required placeholder="Nombre"
-                        style="width:300px">
-                </p>
-                <p>
-                    <input id="price" type="number" name="price" required placeholder="Precio (en pesos chilenos)"
-                        style="width:300px">
-                </p>
-                <p>
-                    <input id="desc" name="desc" minleght="15" type="text" style="width:300px; height:100px" required
-                        placeholder="Descripcion">
-                </p>
-                <p>
-                    <input id="histobr" name="histobr" minleght="15" type="text" style="width:300px; height:100px"
-                        required placeholder="Historia de la obra">
-                </p>
-                <p>
-                    <input id="tecusa" name="tecusa" minlength="5" type="text" required placeholder="Tecnica usada"
-                        style="width:300px">
-                </p>
-                <p>
-                    <label for="img">Imagen </label>
-                    <br><input id="img" name="img" type="file" required></br>
-                </p>
-                <p>
-                    <input class="btn btn-dark" type="submit" value="Agregar">
-                </p>
+        <section id="ingreso">
+            <form class="form-ingreso" action="" method="post">
+                <h2 class="titulo-ingreso">Iniciar Sesion</h2>
+                <div class="contenedor-input">
+                    <input class="col-xl" type="email" name="txtEmail" id="" placeholder="Ingrese email" required
+                        minlength="5">
+                    <input class="col-xl" type="password" name="txtPass" id="" placeholder="Ingrese Contraseña" required
+                        minlength="5">
+                    <input type="submit" value="Iniciar Sesión">
+                </div>
             </form>
-            <footer id="Footer">
-
-            </footer>
-            <script>
-                $(document).ready(function () {
-                    $("#basic-form").validate();
-                });
-            </script>
+        </section>
     </main>
 
     <!-- Optional JavaScript -->
